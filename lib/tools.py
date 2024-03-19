@@ -79,6 +79,7 @@ def angle_to_point(axis_0, axis_1):
     return ang
 
 
+# TODO this shouldn't have `hue_to_rgb` stuck in the middle of it
 def brighten_pixels_less_than_y(pixels, y_value, scale_factor):
     """Colour-scale some pixels."""
     lights = []

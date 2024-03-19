@@ -1,5 +1,6 @@
 from unittest import TestCase
 
+from lib.pixel import Pixel
 from lib.scaler import Scaler, deconstruct, find_largest_span, normalise_list
 
 
@@ -162,6 +163,22 @@ class TestScaler(TestCase):
                     "z": 1,
                 },
             ],
+        )
+
+    def test_as_pixels(self):
+        """Test it yields a list of `Pixels`."""
+        scaler = Scaler("tests/fixtures/scaler/messy-locations.yaml")
+        pixels = scaler.as_pixels()
+        assert pixels[0] == Pixel(
+            index=0,
+            x=-0.38,
+            y=0.945,
+            z=-0.57,
+            _hue=0.0,
+            _saturation=1.0,
+            _value=1.0,
+            _rgb=(0, 0, 0),
+            angle=0,
         )
 
 

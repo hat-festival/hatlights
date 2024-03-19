@@ -61,12 +61,12 @@ class TestHat(TestCase):
         self.hat.sort("x")
 
         self.assertEqual(  # noqa: PT009
-            list(map(lambda x: x["index"], self.hat.pixels))[0:16],  # noqa: C417
+            list(map(lambda x: x.index, self.hat.pixels))[0:16],  # noqa: C417
             [50, 12, 70, 85, 77, 5, 11, 24, 91, 25, 84, 78, 63, 30, 62, 36],
         )
         for i in range(len(self.hat.pixels) - 1):
             self.assertLessEqual(  # noqa: PT009
-                self.hat.pixels[i]["x"], self.hat.pixels[i + 1]["x"]
+                self.hat.pixels[i].x, self.hat.pixels[i + 1].x
             )
 
     def test_illuminate(self):

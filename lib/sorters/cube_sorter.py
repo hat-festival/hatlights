@@ -1,6 +1,5 @@
 from math import sqrt
 
-from lib.pixel import Pixel
 from lib.scaler import Scaler
 
 
@@ -11,7 +10,7 @@ class CubeSorter:
         """Construct."""
         self.locations = locations
         self.scaler = Scaler(locations, auto_centre=False)
-        self.pixels = list(map(Pixel, self.scaler))
+        self.pixels = self.scaler.as_pixels()
 
     def sort_from(self, *point):
         """Sort from a point."""
@@ -37,7 +36,7 @@ def is_inside_sphere(pixel, centre, radius):
     """Is this pixel inside this sphere."""
     # https://math.stackexchange.com/a/3118250
     return (
-        (pixel["x"] - centre[0]) ** 2
-        + (pixel["y"] - centre[1]) ** 2
-        + (pixel["z"] - centre[2]) ** 2
+        (pixel.x - centre[0]) ** 2
+        + (pixel.y - centre[1]) ** 2
+        + (pixel.z - centre[2]) ** 2
     ) < radius**2

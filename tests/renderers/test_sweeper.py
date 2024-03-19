@@ -8,7 +8,7 @@ def test_construct():
     hat = Hat(locations="tests/fixtures/conf/circles/1-location.yaml")
     swpr = Sweeper(hat=hat)
 
-    assert swpr.hat.pixels[0]["x"] == 0
+    assert swpr.hat.pixels[0].x == 0
 
 
 def test_two_location_data():

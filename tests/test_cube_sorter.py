@@ -25,4 +25,4 @@ class TestCubeSorter(TestCase):
 
 def just_the_indeces(pixel_list):
     """Get just the indeces of the pixels."""
-    return [x["index"] for x in pixel_list]
+    return [x.index for x in pixel_list]

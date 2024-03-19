@@ -2,6 +2,8 @@ from pathlib import Path
 
 import yaml
 
+from lib.pixel import Pixel
+
 
 class Scaler(list):
     """Pixel scaler thing."""
@@ -36,6 +38,19 @@ class Scaler(list):
                     if axis == "y":
                         scaled_light[axis] = 0 - scaled_light[axis]
                 self.append(scaled_light)
+
+    # TODO make this the default
+    def as_pixels(self):
+        """Return as a list of `Pixels`."""
+        return [
+            Pixel(
+                index=item["index"],
+                x=item["x"],
+                y=item["y"],
+                z=item["z"],
+            )
+            for item in self
+        ]
 
 
 def find_largest_span(absolutes):
