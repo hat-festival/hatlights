@@ -1,4 +1,4 @@
-Adafruit-Blinka==8.35.0
+Adafruit-Blinka==8.37.0
 adafruit-circuitpython-busdevice==5.2.6
 adafruit-circuitpython-connectionmanager==1.0.1
 adafruit-circuitpython-framebuf==1.6.5
