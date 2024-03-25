@@ -7,7 +7,7 @@ adafruit-circuitpython-pixelbuf==2.0.4
 adafruit-circuitpython-requests==3.0.0
 adafruit-circuitpython-ssd1306==2.12.17
 adafruit-circuitpython-typing==1.10.2
-Adafruit-PlatformDetect==3.60.0
+Adafruit-PlatformDetect==3.62.0
 Adafruit-PureIO==1.1.11
 async-timeout==4.0.3
 aubio==0.4.9
