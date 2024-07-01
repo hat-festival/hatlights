@@ -5,7 +5,7 @@ adafruit-circuitpython-connectionmanager==2.0.0
 adafruit-circuitpython-framebuf==1.6.5
 adafruit-circuitpython-neopixel==6.3.11
 adafruit-circuitpython-pixelbuf==2.0.4
-adafruit-circuitpython-requests==3.2.8
+adafruit-circuitpython-requests==4.1.2
 adafruit-circuitpython-ssd1306==2.12.17
 adafruit-circuitpython-typing==1.10.3
 Adafruit-PlatformDetect==3.62.0
